@@ -394,6 +394,8 @@ textarea {
     color:#000;
   }
   .header{
+    display: flex;
+    flex-direction: column;
     position: fixed;
     background-color: white;
     top: 0;
@@ -401,8 +403,10 @@ textarea {
     width: 100%;
   }
   .header__wrapper{
-    max-width: 1200px;
     margin: 0 auto;
+  }
+  .header__wrapper.container{
+    width: 1200px;
   }
   .header__wrapper-buttons{
     display: flex;
@@ -454,10 +458,12 @@ textarea {
     width: 100%;
     flex: 1 1 auto;
   }
+  .main__list.container{
+    width: 1200px;
+  }
   .main__list{
     display: flex;
     flex-direction: column;
-    max-width: 1200px;
     margin: 110px auto 0px auto;
   }
   .main__list-category{
@@ -550,12 +556,14 @@ textarea {
   .footer{
     display: flex;
     justify-content: center;
-    width: 100%;
+    max-width: 100%;
+  }
+  .footer__wrapper.container{
+    width: 1200px;
   }
   .footer__wrapper{
     display: flex;
     justify-content: center;
-    width: 100%;
     max-width: 1200px;
     margin: 10px auto;
     padding-top: 10px;
@@ -566,21 +574,8 @@ textarea {
     text-decoration: none;
     color: #c0c0c0;
   }
-
-  @media screen and (max-width: 1250px) {
-    .header__wrapper{
-      max-width: 96%;
-    }
-    .main__list{
-      max-width: 96%;
-    }
-    .footer__wrapper{
-      max-width: 96%;
-    }
-    .
-  }
-  @media screen and (max-width: 1000px){
-    .main__list-category-dishes{
-      flex-wrap: wrap;
+  @media (max-width: 1200px) {
+    .container{
+      max-width: 960px;
     }
   }
